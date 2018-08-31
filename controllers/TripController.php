@@ -20,7 +20,7 @@ class TripController extends Controller
 
         $tripquery = new TripQuery();
 
-        $dataprovider = $tripquery->query(Yii::$app->request->get('param'));
+        $dataprovider = $tripquery->query(Yii::$app->request->get('param','Домодедово, Москва'));
 
         return $this->render('index',[
             'dataProvider' => $dataprovider
